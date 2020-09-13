@@ -324,7 +324,6 @@ class SearchableDropdown<T> extends StatefulWidget {
   })  : assert(items != null),
         assert(iconSize != null),
         assert(isExpanded != null),
-        assert(isClear != null),
         assert(!multipleSelection || doneButton != null),
         assert(menuConstraints == null || !dialogBox),
         super(key: key);
@@ -362,7 +361,6 @@ class SearchableDropdown<T> extends StatefulWidget {
     this.menuConstraints,
     this.readOnly = false,
     this.menuBackgroundColor,
-    this.isClear = false,
   })  : assert(items != null),
         assert(iconSize != null),
         assert(isExpanded != null),
@@ -633,6 +631,11 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
       return (Text(string,
           style: TextStyle(color: Colors.blueAccent, fontSize: 13)));
     });
+
+    if (widget.isClear == true){
+      clearSelection();
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -675,9 +678,6 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
         displayMenu.value ? menuWidget : SizedBox.shrink(),
       ],
     );
-    if (widget.isClear == true){
-      clearSelection();
-    }
   }
 
   clearSelection() {
