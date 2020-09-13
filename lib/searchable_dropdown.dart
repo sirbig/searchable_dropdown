@@ -324,6 +324,7 @@ class SearchableDropdown<T> extends StatefulWidget {
   })  : assert(items != null),
         assert(iconSize != null),
         assert(isExpanded != null),
+        assert(isClear != null),
         assert(!multipleSelection || doneButton != null),
         assert(menuConstraints == null || !dialogBox),
         super(key: key);
@@ -365,6 +366,7 @@ class SearchableDropdown<T> extends StatefulWidget {
   })  : assert(items != null),
         assert(iconSize != null),
         assert(isExpanded != null),
+        assert(isClear != null),
         assert(!multipleSelection || doneButton != null),
         assert(menuConstraints == null || !dialogBox),
         super(key: key);
