@@ -675,9 +675,9 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
         displayMenu.value ? menuWidget : SizedBox.shrink(),
       ],
     );
-    if (isClear == true){
+    if (widget.isClear == true){
       clearSelection();
-      isClear = false;
+      widget.isClear = false;
     }
   }
 
