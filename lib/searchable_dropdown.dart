@@ -677,7 +677,6 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
     );
     if (widget.isClear == true){
       clearSelection();
-      widget.isClear = false;
     }
   }
 
