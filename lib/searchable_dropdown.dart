@@ -633,7 +633,6 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
     });
 
     if (widget.isClear == true){
-      print("passa isclear");
       selectedItems.clear();
     }
 
