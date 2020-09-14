@@ -689,7 +689,6 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
       widget.onClear();
     }
   }
-}
 
   clearSelection() {
     selectedItems.clear();
