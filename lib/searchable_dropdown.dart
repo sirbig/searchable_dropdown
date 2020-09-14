@@ -633,7 +633,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
     });
 
     if (widget.value == null || widget.value == ""){
-      clearSelection();
+      clearSelectionWithoutSetState();
     }
 
     return Column(
@@ -689,6 +689,16 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
       widget.onClear();
     }
     setState(() {});
+  }
+
+  clearSelectionWithoutSetState() {
+    selectedItems.clear();
+    if (widget.onChanged != null) {
+      widget.onChanged(selectedResult);
+    }
+    if (widget.onClear != null) {
+      widget.onClear();
+    }
   }
 }
 
