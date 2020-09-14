@@ -632,7 +632,8 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
           style: TextStyle(color: Colors.blueAccent, fontSize: 13)));
     });
 
-    if (widget.value == null){
+    print(widget.value);
+    if (widget.value == null || widget.value == ""){
       clearSelection();
     }
 
