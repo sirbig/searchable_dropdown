@@ -83,7 +83,6 @@ class SearchableDropdown<T> extends StatefulWidget {
   final BoxConstraints menuConstraints;
   final bool readOnly;
   final Color menuBackgroundColor;
-  final bool isClear;
 
   /// Search choices Widget with a single choice that opens a dialog or a menu to let the user do the selection conveniently with a search.
   ///
@@ -149,7 +148,6 @@ class SearchableDropdown<T> extends StatefulWidget {
     BoxConstraints menuConstraints,
     bool readOnly = false,
     Color menuBackgroundColor,
-    bool isClear = false,
   }) {
     return (SearchableDropdown._(
       key: key,
@@ -183,7 +181,6 @@ class SearchableDropdown<T> extends StatefulWidget {
       menuConstraints: menuConstraints,
       readOnly: readOnly,
       menuBackgroundColor: menuBackgroundColor,
-      isClear: isClear,
     ));
   }
 
@@ -249,7 +246,6 @@ class SearchableDropdown<T> extends StatefulWidget {
     BoxConstraints menuConstraints,
     bool readOnly = false,
     Color menuBackgroundColor,
-    bool isClear = false,
   }) {
     return (SearchableDropdown._(
       key: key,
@@ -283,7 +279,6 @@ class SearchableDropdown<T> extends StatefulWidget {
       menuConstraints: menuConstraints,
       readOnly: readOnly,
       menuBackgroundColor: menuBackgroundColor,
-      isClear: isClear,
     ));
   }
 
@@ -320,7 +315,6 @@ class SearchableDropdown<T> extends StatefulWidget {
     this.menuConstraints,
     this.readOnly = false,
     this.menuBackgroundColor,
-    this.isClear = false,
   })  : assert(items != null),
         assert(iconSize != null),
         assert(isExpanded != null),
@@ -361,7 +355,6 @@ class SearchableDropdown<T> extends StatefulWidget {
     this.menuConstraints,
     this.readOnly = false,
     this.menuBackgroundColor,
-    this.isClear,
   })  : assert(items != null),
         assert(iconSize != null),
         assert(isExpanded != null),
