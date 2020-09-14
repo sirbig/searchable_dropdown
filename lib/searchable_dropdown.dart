@@ -626,6 +626,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
     });
 
     if (widget.value == null || widget.value == ""){
+      print("passou clear");
       selectedItems.clear();
     }
 
