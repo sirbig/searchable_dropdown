@@ -627,7 +627,9 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
 
     if (widget.value == null || widget.value == ""){
       selectedItems.clear();
-      setState(() {});
+      if (widget.onClear != null) {
+        widget.onClear();
+      }
     }
 
     return Column(
