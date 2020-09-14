@@ -633,7 +633,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
     });
 
     if (widget.isClear == true){
-      clearSelectionWithoutSetState();
+      clearSelection();
     }
 
     return Column(
@@ -678,16 +678,6 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
         displayMenu.value ? menuWidget : SizedBox.shrink(),
       ],
     );
-  }
-
-  clearSelectionWithoutSetState() {
-    selectedItems.clear();
-    if (widget.onChanged != null) {
-      widget.onChanged(selectedResult);
-    }
-    if (widget.onClear != null) {
-      widget.onClear();
-    }
   }
 
   clearSelection() {
