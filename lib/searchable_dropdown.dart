@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 const EdgeInsetsGeometry _kAlignedButtonPadding =
-    EdgeInsetsDirectional.only(start: 1.0, end: 4.0);
+    EdgeInsetsDirectional.only(start: 16.0, end: 0);
 const EdgeInsets _kUnalignedButtonPadding = EdgeInsets.zero;
 
 class NotGiven {
